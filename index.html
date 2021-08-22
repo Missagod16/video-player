@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <title>Videoplayer </title>
+
+</head>
+<body>
+    
+    <div class="wrapper">
+    
+    <div class="player">
+        <div> 
+            <video id="video" poster="./images/poster.jpg" src="./videos/trailer.mp4"width="400">
+    
+        </div>
+        
+        <div class="player-overlay">
+            <h2 class="player-title"> Musica para programar</h2>
+            
+            <div class="player-actions">
+
+                <button class="button" aria-label="atrasa 10 segundos" title="atrasa 10 segundos" id="backward"></button>
+                <button class="button" aria-label="reproducir" title="reproducir" id="play"></button>
+                <button class="button" hidden aria-label="pausar" title="pausar" id="pause"></button>
+                <button class="button" aria-label="adelanta 10 segundos" title="adelanta 10 segundos" id="forward"></button>
+                
+            </div>
+        
+         
+            <div class="player-progress">
+                <input id="progress" type="range" min="0" max="284.11" value="0" step="1">
+                </div>
+        
+        
+    </div>
+        
+    </div>
+    
+
+</video>
+
+<script src="./js/index.js">
+</script>
+
+</body>
+
+
+
+
+</html>

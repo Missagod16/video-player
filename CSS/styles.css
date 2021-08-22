@@ -1,0 +1,112 @@
+body{
+    background-color: rgba(14, 10, 14, 0.925);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.button{
+inline-size: 32px;
+block-size: 32px;
+background-color: transparent;
+border: none;
+background-repeat: no-repeat;
+background-position: center;
+cursor: pointer;
+
+}
+
+.wrapper{
+    max-inline-size: 900px;
+    margin: auto;
+}
+
+.player{
+
+    margin-block-start: 100px;
+    border: 10px solid transparent;
+
+    position: relative;
+}
+
+.player video{
+    inline-size: 100%;
+    border: 2px solid transparent;
+    aspect-ratio: 16/9;
+    vertical-align: middle;
+    object-fit: cover;
+    
+}
+
+.button:active{
+    transform: scale(.9);
+}
+
+#play {
+
+    background-image: url('../images/play.svg');
+}
+
+#pause {
+background-image: url('../images/pause.svg');
+
+}
+
+
+
+#backward{
+    background-image: url('../images/-10.svg');
+}
+
+#forward{
+    background-image: url('../images/+10.svg');
+}
+
+.player-title{
+    color: white;
+    position: absolute;
+    inset-block-start: 0px;
+    inset-inline-start: 15px;
+   
+}
+
+.player-actions{
+position: absolute;
+inset: 0;
+border: 10px solid transparent;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 2;
+gap: 20px;
+/*
+detalle el hacer la accion anterior permite que las  opciones de reproducir sean utilizables redirigiendo a la parte trasera al video.
+*/
+/*inset-block-end: 0;
+inset-block-start: 0;
+inset-inline-end: 0;
+inset-inline-start: 0;*/
+/*nota: es lo mismo el inset:0; que todo lo verde*/
+}
+
+.player-progress{
+    
+    position:absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    z-index: 2;
+    display: flex;
+    padding: 10px;
+}
+
+.player-progress input{
+flex: 1;
+}
+
+.player-overlay{
+   position: absolute;
+   inset: 0;
+  opacity: 0;
+  transition: 0.3s opacity ;
+}
+
+.player:hover .player-overlay{
+    opacity: 1;
+}
